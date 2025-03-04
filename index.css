@@ -34,7 +34,7 @@ section {
   gap: 20px;
 }
 h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 .home-container {
   display: flex;
@@ -46,7 +46,7 @@ h1 {
 .text-div {
   width: 100%;
   max-width: 60%;
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   text-transform: uppercase;
   position: relative;
   overflow: hidden;
@@ -58,7 +58,7 @@ h1 {
 
 .about {
   text-transform: none;
-  font-size: 2rem;
+  font-size: 1.4rem;
 }
 .text-div::before {
   content: "";
@@ -72,17 +72,17 @@ h1 {
   transition: transform 0.5s ease-in-out;
 }
 
-.text-div:hover {
+/* .text-div:hover {
   transform: scale(1.05) rotate(-2deg);
   transition: transform 0.5s ease-in-out;
-}
+} */
 
 /* ------------ CONTACT ------------*/
 .text-div-contact {
   position: relative;
   max-width: 60%;
   width: 100%;
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   padding: 30px;
   top: -5%;
   overflow: hidden;
@@ -111,7 +111,7 @@ h1 {
 
 .links .contact {
   color: #e41f7b;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .links .link > a i {
@@ -141,7 +141,6 @@ nav ul {
   justify-content: space-around;
   list-style: none;
   padding-left: 0;
-  font-size: 2rem;
 }
 
 .navbar-item .active {
@@ -153,7 +152,7 @@ nav ul {
 a {
   position: relative;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #e41f7b;
   display: block;
   transition: transform 0.5s ease-in-out;
@@ -200,14 +199,11 @@ button {
 
 @media (max-width: 1000px) {
   .text-div {
-    font-size: 1.8rem;
-  }
-  .nav ul {
     font-size: 1.5rem;
   }
 
   .navbar-item a {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 }
 
@@ -232,6 +228,13 @@ button {
     text-shadow: 0px 2px 7px #e41f7b;
     transform: scale(1.2) rotate(90deg);
     transition: all 0.3s ease-in-out;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+  .about {
+    font-size: 1.2rem;
   }
 
   nav {
@@ -271,16 +274,12 @@ button {
     height: 50%;
   }
 
-  .nav ul {
-    font-size: 2rem;
-  }
-
   .navbar-item a {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .navbar-content li {
-    width: 160px;
+    width: 200px;
   }
 
   #close-navbar {
