@@ -318,20 +318,25 @@ button {
     top: 0;
   }
 
+  .navbar .nav-link i {
+    margin-right: 0;
+  }
+
   .navbar-content ul {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 40px;
+    gap: 50px;
     list-style: none;
     padding: 0;
-    justify-content: space-around;
-    height: 50%;
+    height: 60%;
   }
 
   .navbar-item a {
     font-size: 1.5rem;
-    display: flex;
+    display: grid;
+    gap: 15px;
+    text-align: center;
     justify-content: stretch;
   }
 
