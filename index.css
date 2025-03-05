@@ -22,6 +22,31 @@ section {
   display: flex;
 }
 
+.language-switcher {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.language-switcher a {
+  font-size: 1rem;
+  color: #e41f7b;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+.language-switcher a.active {
+  font-weight: bold;
+  color: #ff8ba0;
+}
+
+.language-switcher a:hover {
+  color: #ff8ba0;
+  font-weight: bold;
+  text-shadow: 0px 2px 7px #e41f7b;
+  transform: scale(1.2);
+}
+
 #aboutMe {
   width: 100%;
   height: 100vh;
@@ -33,7 +58,7 @@ section {
   flex-direction: column;
   gap: 20px;
 }
-h1 {
+h3 {
   font-size: 2.5rem;
 }
 .home-container {
@@ -50,6 +75,9 @@ h1 {
   text-transform: uppercase;
   position: relative;
   overflow: hidden;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  white-space: normal;
   transition: transform 0.3s ease-in-out;
   padding: 30px;
   top: -5%;
@@ -59,6 +87,20 @@ h1 {
 .about {
   text-transform: none;
   font-size: 1.4rem;
+}
+
+.about p {
+  z-index: 20;
+  position: relative;
+}
+.about p a {
+  color: #ff8ba0;
+  transition: all 0.3s ease-in-out;
+}
+.about p a:hover {
+  color: #ff8ba0;
+  /* font-weight: bold; */
+  text-shadow: 0px 2px 7px #e41f7b;
 }
 .text-div::before {
   content: "";
@@ -86,6 +128,8 @@ h1 {
   padding: 30px;
   top: -5%;
   overflow: hidden;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
   text-transform: uppercase;
   text-align: center;
   transition: transform 0.3s ease-in-out;
@@ -149,7 +193,7 @@ nav ul {
   transform: scale(1.2);
 }
 
-a {
+.nav-link {
   position: relative;
   text-decoration: none;
   font-size: 1.5rem;
@@ -158,21 +202,21 @@ a {
   transition: transform 0.5s ease-in-out;
 }
 
-.navbar a:hover {
+.navbar .nav-link:hover {
   color: #ff8ba0;
   text-shadow: 0px 2px 7px #e41f7b;
   transform: scale(1.2);
   transition: transform 0.5s ease-in-out;
 }
 
-.navbar a:hover::before {
+.navbar .nav-link:hover::before {
   width: 125%;
   left: -12.5%;
   transform: scaleX(1);
   transform-origin: center;
 }
 
-.navbar a::before {
+.navbar .nav-link::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -189,7 +233,7 @@ a {
   display: none;
 }
 
-.navbar a i {
+.navbar .nav-link i {
   margin-right: 20px;
 }
 
@@ -205,9 +249,12 @@ button {
   .navbar-item a {
     font-size: 1.3rem;
   }
+  .language-switcher a {
+    font-size: 0.8rem;
+  }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 850px) {
   button {
     display: contents;
   }
@@ -230,13 +277,21 @@ button {
     transition: all 0.3s ease-in-out;
   }
 
-  h1 {
+  h3 {
     font-size: 2rem;
   }
   .about {
     font-size: 1.2rem;
   }
-
+  .language-switcher {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+  }
+  .language-switcher a {
+    font-size: 1.2rem !important;
+  }
   nav {
     height: 70px;
   }
@@ -276,10 +331,15 @@ button {
 
   .navbar-item a {
     font-size: 1.5rem;
+    display: flex;
+    justify-content: stretch;
   }
 
   .navbar-content li {
-    width: 200px;
+    width: 220px;
+  }
+  .navbar-item:last-child {
+    align-self: self-end;
   }
 
   #close-navbar {
@@ -299,5 +359,10 @@ button {
     text-shadow: 0px 2px 7px #e41f7b;
     transform: scale(1.2) rotate(90deg);
     transition: all 0.3s ease-in-out;
+  }
+}
+@media (max-width: 400px) {
+  .text-div {
+    font-size: 1.2rem;
   }
 }
